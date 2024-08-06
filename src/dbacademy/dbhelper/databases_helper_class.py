@@ -60,7 +60,7 @@ class DatabasesHelper:
             else:
                 return print(f"Skipping existing schema \"{db_name}\" for {username}")
 
-        dbgems.sql(f"CREATE DATABASE IF NOT EXISTS {db_name} LOCATION '{db_path}';")
+        dbgems.sql(f"CREATE DATABASE IF NOT EXISTS {db_name} MANAGED LOCATION '{db_path}';")
 
         msg = f"Created schema \"{db_name}\" for \"{username}\", dropped existing: {drop_existing}"
 
