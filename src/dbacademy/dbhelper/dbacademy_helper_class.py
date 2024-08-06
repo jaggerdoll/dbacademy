@@ -11,7 +11,7 @@ class DBAcademyHelper:
     SCHEMA_INFORMATION = "information_schema"
 
     SPARK_CONF_SMOKE_TEST = "dbacademy.smoke-test"
-    SPARK_CONF_PATHS_DATASETS = "abfss:/mnt/dbacademy-datasets" #"dbacademy.paths.datasets"
+    SPARK_CONF_PATHS_DATASETS = "dbacademy.paths.datasets"
     SPARK_CONF_PATHS_USERS = "dbacademy.paths.users"
     SPARK_CONF_DATA_SOURCE_URI = "dbacademy.data-source-uri"
     SPARK_CONF_PROTECTED_EXECUTION = "dbacademy.protected-execution"
