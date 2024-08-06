@@ -142,7 +142,7 @@ class DBAcademyHelper:
         :return: the location of the DBAcademy user's directory.
         """
         from dbacademy import dbgems
-        return dbgems.get_spark_config(DBAcademyHelper.SPARK_CONF_PATHS_USERS, default="abfss://dbstorageey5dyhfd7opxu@onemagnify.dfs.core.windows.net/dbacademy-users")
+        return dbgems.get_spark_config(DBAcademyHelper.SPARK_CONF_PATHS_USERS, default="dbfs:/mnt/dbacademy-users")
 
     @staticmethod
     def get_dbacademy_datasets_staging() -> str:
