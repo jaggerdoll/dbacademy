@@ -131,7 +131,7 @@ class DBAcademyHelper:
         :return: the location of the DBAcademy datasets.
         """
         from dbacademy import dbgems
-        return dbgems.get_spark_config(DBAcademyHelper.SPARK_CONF_PATHS_DATASETS, default="abfss:/mnt/dbacademy-datasets")
+        return dbgems.get_spark_config(DBAcademyHelper.SPARK_CONF_PATHS_DATASETS, default="dbfs:/mnt/dbacademy-datasets")
 
     @staticmethod
     def get_dbacademy_users_path() -> str:
