@@ -59,11 +59,11 @@ class DatabasesHelper:
                 dbgems.spark.sql(f"DROP DATABASE IF EXISTS {db_name} CASCADE;")
             else:
                 return print(f"Skipping existing schema \"{db_name}\" for {username}")
-
+        
+        msg = f"Creating schema \"{db_name}\" for \"{username}\", dropped existing: {drop_existing}"
+        
         dbgems.sql(f"CREATE DATABASE IF NOT EXISTS {db_name} MANAGED LOCATION '{db_path}';")
-
-        msg = f"Created schema \"{db_name}\" for \"{username}\", dropped existing: {drop_existing}"
-
+        
         if post_create:
             # Call the post-create init function if defined
             response = post_create(username, db_name)
